@@ -12,6 +12,12 @@ class HomePage():
     def login(self):
         return self.driver.find_element(*self.locators.LOGIN_BUTTON)
 
+    def signup(self):
+        return self.driver.find_element(*self.locators.SIGN_UP_BUTTON)
+
+    def submit(self):
+        return self.driver.find_element(*self.locators.SUBMIT_BUTTON)
+
     def email_input(self):
         return self.driver.find_element(*self.locators.EMAIL_INPUT)
 
@@ -23,3 +29,6 @@ class HomePage():
 
     def g_btn(self):
         return self.driver.find_element(*self.locators.G_BUTTON)
+
+    def age_btn(self):
+        return self.driver.find_element(*self.locators.AGE_BUTTON)
