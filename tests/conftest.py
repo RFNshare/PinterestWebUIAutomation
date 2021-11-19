@@ -37,6 +37,7 @@ def setup(request):
     driver.get(
         "https://www.pinterest.com/"
     )
+    driver.maximize_window()
     time.sleep(2)
     yield
     driver.close()

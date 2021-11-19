@@ -27,6 +27,15 @@ class HomePage():
     def fb_btn(self):
         return self.driver.find_element(*self.locators.FB_BUTTON)
 
+    def fb_emailbtn(self):
+        return self.driver.find_element(*self.locators.FB_EMAIL)
+
+    def fb_passbtn(self):
+        return self.driver.find_element(*self.locators.FB_PASS)
+
+    def fb_submitbtn(self):
+        return self.driver.find_element(*self.locators.FB_SUBMIT)
+
     def g_btn(self):
         return self.driver.find_element(*self.locators.G_BUTTON)
 
