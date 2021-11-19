@@ -25,7 +25,6 @@ class TestTC_002(BaseClass):
         # ____ Continue with facebook ____ STEP3
 
     # Google Login
-    @pytest.mark.now
     def test_tc_003(self):
         homepage = HomePage(self.driver)
         homepage.login().click()
