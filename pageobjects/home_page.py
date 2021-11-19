@@ -11,3 +11,9 @@ class HomePage():
 
     def logo_btn(self):
         return self.driver.find_element(*self.locators.LOGO)
+
+    def home_btn(self):
+        return self.driver.find_element(*self.locators.HOME)
+
+    def search(self):
+        return self.driver.find_element(*self.locators.SEARCH)
