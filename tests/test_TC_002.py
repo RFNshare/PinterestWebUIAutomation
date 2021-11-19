@@ -44,7 +44,6 @@ class TestTC_002(BaseClass):
         except Exception as e:
             log.info(e)
 
-    @pytest.mark.now
     # Google Login
     def test_tc_003(self):
         homepage = HomePage(self.driver)
