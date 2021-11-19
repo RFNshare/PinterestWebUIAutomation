@@ -2,14 +2,14 @@ import time
 import pytest
 from utilities.base_class import BaseClass
 from utilities.test_data import TestData
-from pageobjects.base_page import HomePage
+from pageobjects.base_page import BasePage
 
 
 # Signup
 class TestTC_003(BaseClass):
     # Email Signup
     def test_tc_001(self):
-        homepage = HomePage(self.driver)
+        homepage = BasePage(self.driver)
         log = self.getLogger()
         homepage.signup().click()
         time.sleep(5)
@@ -25,12 +25,11 @@ class TestTC_003(BaseClass):
         time.sleep(5)
         log.info("Successfully signup with email")
 
-    @pytest.mark.now
     # FB Signup
     def test_tc_002(self):
         main_page = self.driver.current_window_handle
         log = self.getLogger()
-        homepage = HomePage(self.driver)
+        homepage = BasePage(self.driver)
         homepage.login().click()
         homepage.fb_btn().click()
         time.sleep(15)
@@ -54,7 +53,7 @@ class TestTC_003(BaseClass):
 
     # Google Signup
     def test_tc_003(self):
-        homepage = HomePage(self.driver)
+        homepage = BasePage(self.driver)
         log = self.getLogger()
         homepage.login().click()
         homepage.g_btn().click()

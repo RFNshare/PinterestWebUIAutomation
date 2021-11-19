@@ -1,6 +1,7 @@
 import time
 from selenium import webdriver
 import pytest
+import json
 
 
 def pytest_addoption(parser):
@@ -24,6 +25,18 @@ def home_setup(request):
     driver.close()
 
 
+# def save_cookie(driver, path):
+#     with open(path, 'w') as filehandler:
+#         json.dump(driver.get_cookies(), filehandler)
+#
+#
+# def load_cookie(driver, path):
+#     with open(path, 'r') as cookiesfile:
+#         cookies = json.load(cookiesfile)
+#     for cookie in cookies:
+#         driver.add_cookie(cookie)
+
+
 @pytest.fixture(scope="class")
 def setup(request):
     browser_name = request.config.getoption("browser_name")
@@ -38,6 +51,9 @@ def setup(request):
         "https://www.pinterest.com/"
     )
     driver.maximize_window()
+    # save_cookie(driver)
+    # load_cookie(driver)
+
     time.sleep(2)
     yield
     driver.close()
