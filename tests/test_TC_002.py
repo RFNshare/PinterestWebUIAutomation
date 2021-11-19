@@ -13,7 +13,9 @@ class TestTC_002(BaseClass):
         log = self.getLogger()
         homepage.login().click()
         time.sleep(5)
+        # clear
         homepage.email_input().send_keys(TestData.DEMO_EMAIL)
+        # clear
         homepage.pass_input().send_keys(TestData.DEMO_PASS)
         time.sleep(5)
         homepage.submit().click()
@@ -33,7 +35,9 @@ class TestTC_002(BaseClass):
                 fb_login = handle
                 self.driver.switch_to.window(fb_login)
         time.sleep(3)
+        # clear
         homepage.fb_emailbtn().send_keys(TestData.DEMO_EMAIL)
+        # clear
         time.sleep(3)
         homepage.fb_passbtn().send_keys(TestData.DEMO_PASS)
         time.sleep(3)

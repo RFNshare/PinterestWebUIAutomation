@@ -13,9 +13,12 @@ class TestTC_003(BaseClass):
         log = self.getLogger()
         homepage.signup().click()
         time.sleep(5)
+        # clear
         homepage.email_input().send_keys('af.qups@gmail.com')
         time.sleep(5)
+        # clear
         homepage.pass_input().send_keys('asdfgh123')
+        # clear
         homepage.age_btn().send_keys('25')
         time.sleep(5)
         homepage.submit().click()
@@ -37,8 +40,10 @@ class TestTC_003(BaseClass):
                 self.driver.switch_to.window(fb_login)
         time.sleep(3)
         homepage.fb_emailbtn().send_keys(TestData.DEMO_EMAIL)
+        # clear
         time.sleep(3)
         homepage.fb_passbtn().send_keys(TestData.DEMO_PASS)
+        # clear
         time.sleep(3)
         homepage.fb_submitbtn().click()
         try:
