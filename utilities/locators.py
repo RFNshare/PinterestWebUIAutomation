@@ -27,3 +27,7 @@ class HomePageLocators(object):
     MESSAGES_BOX = (By.XPATH, "//textarea[@id='messageDraft']")
     # Profile
     PROFILE_BUTTON = (By.XPATH, "//div[@data-test-id='header-profile']")
+    PROFILE_EDIT_BUTTON = (By.XPATH, "//div[text()='Edit Profile']")
+    PROFILE_SHARE_BUTTON = (By.XPATH, "//div[text()='Share']")
+    # Help Center
+    QUESTION_MARK = (By.XPATH, "//div[@class='JME wc1 zI7 iyn Hsu']/div/button[@aria-label='More']")

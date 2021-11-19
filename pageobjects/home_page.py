@@ -32,3 +32,12 @@ class HomePage():
 
     def profile_button(self):
         return self.driver.find_element(*self.locators.PROFILE_BUTTON)
+
+    def profile_edit_button(self):
+        return self.driver.find_element(*self.locators.PROFILE_EDIT_BUTTON)
+
+    def profile_share_button(self):
+        return self.driver.find_element(*self.locators.PROFILE_SHARE_BUTTON)
+
+    def question_button(self):
+        return self.driver.find_element(*self.locators.QUESTION_MARK)

@@ -59,11 +59,31 @@ class TestTC_004(BaseClass):
         logo.info("Successfully Send Message")
         time.sleep(10)
 
-    @pytest.mark.login
     def test_tc_006(self):
         homepage = HomePage(self.driver)
         log = self.getLogger()
         homepage.profile_button().click()
         log.info("Successfully click Profile")
+        homepage.profile_edit_button().click()
+        log.info("Successfully click Edit Profile")
         time.sleep(5)
 
+    def test_tc_007(self):
+        homepage = HomePage(self.driver)
+        log = self.getLogger()
+        homepage.profile_button().click()
+        log.info("Successfully click Profile")
+        time.sleep(2)
+        homepage.profile_share_button().click()
+        log.info("Successfully share Profile")
+        time.sleep(5)
+
+    @pytest.mark.login
+    def test_tc_008(self):
+        homepage = HomePage(self.driver)
+        log = self.getLogger()
+        homepage.profile_button().click()
+        log.info("Successfully click Profile")
+        # homepage.question_button().click()
+        # log.info("Successfully Click qs")
+        # time.sleep(5)
