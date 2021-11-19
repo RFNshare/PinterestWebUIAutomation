@@ -14,7 +14,7 @@ from .test_TC_002 import TestTC_002
 # Homepage
 class TestTC_004(BaseClass):
     # Email Signup
-    @pytest.mark.login_4
+    @pytest.mark.login
     def test_tc_000(self):
         homepage = BasePage(self.driver)
         homepage.login().click()
@@ -31,17 +31,39 @@ class TestTC_004(BaseClass):
         logo = self.getLogger()
         logo.info("Successfully click logo button")
 
-    @pytest.mark.login_4
     def test_tc_002(self):
         homepage = HomePage(self.driver)
         homepage.home_btn().click()
         logo = self.getLogger()
         logo.info("Successfully click home button")
 
-    @pytest.mark.login_4
     def test_tc_003(self):
         homepage = HomePage(self.driver)
         homepage.search().send_keys("Avatar", Keys.ENTER)
         time.sleep(15)
-        # logo = self.getLogger()
-        # logo.info("Successfully click home button")
+
+    def test_tc_004(self):
+        homepage = HomePage(self.driver)
+        homepage.notifications().click()
+        time.sleep(5)
+
+    def test_tc_005(self):
+        homepage = HomePage(self.driver)
+        logo = self.getLogger()
+        homepage.messages().click()
+        time.sleep(5)
+        homepage.profile().click()
+        logo.info("Successfully Click Profile")
+        time.sleep(3)
+        homepage.messages_box().send_keys("Hello, How are you?", Keys.ENTER)
+        logo.info("Successfully Send Message")
+        time.sleep(10)
+
+    @pytest.mark.login
+    def test_tc_006(self):
+        homepage = HomePage(self.driver)
+        log = self.getLogger()
+        homepage.profile_button().click()
+        log.info("Successfully click Profile")
+        time.sleep(5)
+

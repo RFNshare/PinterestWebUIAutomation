@@ -21,3 +21,9 @@ class HomePageLocators(object):
     LOGO = (By.XPATH, "//a[@aria-label='Home']")
     HOME = (By.XPATH, "//span[@class='tBJ dyH iFc yTZ erh tg7 mWe']")
     SEARCH = (By.XPATH, "//input[@aria-label='Search']")
+    NOTIFICATION = (By.XPATH, "//button[@aria-label='Notifications']")
+    MESSAGES = (By.XPATH, "//button[@aria-label='Messages']")
+    PROFILE = (By.XPATH, "//div[@class='zI7 iyn Hsu']/ul/div")
+    MESSAGES_BOX = (By.XPATH, "//textarea[@id='messageDraft']")
+    # Profile
+    PROFILE_BUTTON = (By.XPATH, "//div[@data-test-id='header-profile']")

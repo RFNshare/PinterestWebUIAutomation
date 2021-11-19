@@ -17,3 +17,18 @@ class HomePage():
 
     def search(self):
         return self.driver.find_element(*self.locators.SEARCH)
+
+    def notifications(self):
+        return self.driver.find_element(*self.locators.NOTIFICATION)
+
+    def messages(self):
+        return self.driver.find_element(*self.locators.MESSAGES)
+
+    def profile(self):
+        return self.driver.find_element(*self.locators.PROFILE)
+
+    def messages_box(self):
+        return self.driver.find_element(*self.locators.MESSAGES_BOX)
+
+    def profile_button(self):
+        return self.driver.find_element(*self.locators.PROFILE_BUTTON)
