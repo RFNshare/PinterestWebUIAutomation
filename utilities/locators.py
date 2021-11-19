@@ -13,5 +13,5 @@ class HomePageLocators(object):
     G_BUTTON = (By.XPATH, "//div[@data-test-id='google-connect-button']")
     # Utilities
     AGE_BUTTON = (By.XPATH, "//input[@id='age']")
-    SUBMIT_BUTTON = (By.XPATH, "//div[text()='Continue']")
+    SUBMIT_BUTTON = (By.XPATH, "//div[@data-test-id='registerFormSubmitButton']")
 

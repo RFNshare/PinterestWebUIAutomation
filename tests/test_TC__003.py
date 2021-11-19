@@ -10,7 +10,7 @@ from pageobjects.base_page import HomePage
 # Signup
 class TestTC_003(BaseClass):
     # Email Signup
-    @pytest.mark.now
+
     def test_tc_001(self):
         homepage = HomePage(self.driver)
         homepage.signup().click()
@@ -22,6 +22,7 @@ class TestTC_003(BaseClass):
         time.sleep(5)
         homepage.submit().click()
         time.sleep(5)
+
 
     # FB Signup
     def test_tc_002(self):
