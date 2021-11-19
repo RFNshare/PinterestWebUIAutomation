@@ -41,3 +41,4 @@ class BasePage():
 
     def age_btn(self):
         return self.driver.find_element(*self.locators.AGE_BUTTON)
+

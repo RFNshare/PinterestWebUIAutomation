@@ -17,3 +17,5 @@ class HomePageLocators(object):
     FB_SUBMIT = (By.XPATH, "//input[@name='login']")
     # Utilities
     G_BUTTON = (By.XPATH, "//div[@data-test-id='google-connect-button']")
+    # After Login
+    LOGO = (By.XPATH, "//a[@aria-label='Home']")

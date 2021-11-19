@@ -9,7 +9,6 @@ from pageobjects.base_page import BasePage
 # Login
 class TestTC_002(BaseClass):
     # Email Login
-    @pytest.mark.now
     def test_tc_001(self):
         homepage = BasePage(self.driver)
         log = self.getLogger()

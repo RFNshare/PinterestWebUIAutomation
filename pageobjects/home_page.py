@@ -8,3 +8,6 @@ class HomePage():
 
     def first_page(self):
         return self.driver
+
+    def logo_btn(self):
+        return self.driver.find_element(*self.locators.LOGO)
